@@ -17,7 +17,7 @@ const Work = () => {
               initial="hidden"
               animate="show"
               exit="hidden"
-              className="h2 xl:mt-12"
+              className="h2 md:text-center mt-12"
             >
               My Projects <span className="text-accent">.</span>
             </motion.h2>
@@ -26,10 +26,10 @@ const Work = () => {
               initial="hidden"
               animate="show"
               exit="hidden"
-              className="mb-4 max-w-[400px] mx-auto lg:mx-0"
+              className="mb-4 max-w-[400px] md:hidden xl:block mx-auto lg:mx-0"
             >
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
-              tempora eligendi, quisquam tempore sint reiciendis.
+              From sleek web apps to powerful tools, here’s a collection of the projects I'm proud to call my own crafted with passion, precision, and a lot more.
+
             </motion.p>
           </div>
           {/* slider */}

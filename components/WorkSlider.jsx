@@ -15,51 +15,51 @@ const workSlides = {
         {
           title: "E-commerce Platform for Ethiopian Entrepreneurs",
           path: "/thumb1.jpg",
-          link: "http://example.com",
+          link: "https://github.com/21mebrat/smart-scalable-E-commerce-platform-for-Ethiopian-entrepreneurs-and-smse",
         },
         {
           title: "Student Dormitory Management System",
           path: "/thumb2.jpg",
-          link: "http://example.com",
+          link: "https://github.com/21mebrat/student-dormitory-management-system",
         },
         {
           title: "Mern Book Store",
           path: "/thumb3.jpg",
-          link: "http://example.com",
+          link: "https://github.com/21mebrat/mern-book-store",
         },
         {
           title: "Driving School Managment System ",
           path: "/thumb4.jpg",
-          link: "http://example.com",
+          link: "https://github.com/21mebrat/php-driving-licence-managment-system",
         },
-        {
-          title: "E-learing Mern-stack ",
-          path: "/thumb4.jpg",
-          link: "http://example.com",
-        },
+        // {
+        //   title: "E-learing Mern-stack ",
+        //   path: "/thumb4.jpg",
+        //   link: "https://github.com/21mebrat/E-learing-mern-stack",
+        // },
       ],
     },
     {
       images: [
         {
-          title: "title",
+          title: "E-learing Mern-stack ",
           path: "/thumb4.jpg",
           link: "http://example.com",
         },
         {
-          title: "title",
+          title: "E-commerce Platform for Ethiopian Entrepreneurs",
           path: "/thumb1.jpg",
-          link: "http://example.com",
+          link: "https://github.com/21mebrat/smart-scalable-E-commerce-platform-for-Ethiopian-entrepreneurs-and-smse",
         },
         {
-          title: "title",
+          title: "Student Dormitory Management System",
           path: "/thumb2.jpg",
-          link: "http://example.com",
+          link: "https://github.com/21mebrat/student-dormitory-management-system",
         },
         {
-          title: "title",
+          title: "Mern Book Store",
           path: "/thumb3.jpg",
-          link: "http://example.com",
+          link: "https://github.com/21mebrat/mern-book-store",
         },
       ],
     },

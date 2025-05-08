@@ -9,27 +9,28 @@ import "swiper/css/pagination";
 
 const testimonialData = [
   {
-    image: "/t-avt-1.png",
-    name: "Anne Smith",
-    position: "Customer",
+    image: "/t-avt-3.jpg",
+    name: "Bawake Mekonnen",
+    position: "Softeware Engineer",
     message:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum expedita odit beatae, cupiditate saepe quam officia aut placeat quas neque!",
+      "Working with this team has completely transformed the way I run my business. Their attention to detail and dedication exceeded all expectations.",
   },
   {
-    image: "/t-avt-2.png",
-    name: "Jane Doe",
-    position: "Customer",
+    image: "/t-avt-3.jpg",
+    name: "Amare Zewdie",
+    position: "Softeware Engineer",
     message:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum expedita odit beatae, cupiditate saepe quam officia aut placeat quas neque!",
+      "From day one, I felt supported. Their solutions are not only efficient but tailored to real-world challenges. Highly recommended!",
   },
   {
-    image: "/t-avt-3.png",
-    name: "Jhon Doe",
-    position: "Customer",
+    image: "/t-avt-3.jpg",
+    name: "Berhanu Tadele",
+    position: "Softeware Engineer",
     message:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum expedita odit beatae, cupiditate saepe quam officia aut placeat quas neque!",
+      "Reliable, innovative, and easy to work with. Their services helped me reach more customers and grow faster than I imagined.",
   },
 ];
+
 
 const TestimonialSlider = () => {
   return (

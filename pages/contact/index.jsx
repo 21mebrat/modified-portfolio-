@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { BsArrowRight } from "react-icons/bs";
-
+import emailjs from '@emailjs/browser';
 import { fadeIn } from "../../variants";
 import { useState } from "react";
 
@@ -11,25 +11,38 @@ const Contact = () => {
     event.preventDefault();
     setIsLoading(true);
 
-    const myForm = event.target;
-    const formData = new FormData(myForm);
+    const templateParams = {
+      to_name: 'May',
+      from_name: event.target.name.value,
+      from_email: event.target.email.value,
+      message: event.target.message.value,
+      reply_to: event.target.email.value,
+    };
 
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: new URLSearchParams(formData).toString(),
+    emailjs.send(
+      process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+      process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+      templateParams,
+      {
+        publicKey: process.env.NEXT_PUBLIC_EMAILJS_USER_ID
+      }
+    )
+    .then(() => {
+      alert('Message sent successfully!');
+      event.target.reset();
+    }, (error) => {
+      alert('Failed to send message. Please try again.');
+      console.error(error);
     })
-      .then(() => alert("Thank you. I will get back to you ASAP."))
-      .catch((error) => console.log(error))
-      .finally(() => setIsLoading(false));
+    .finally(() => {
+      setIsLoading(false);
+    });
   };
 
   return (
     <div className="h-full bg-primary/30 pb-10 md:pb-5">
       <div className="container mx-auto py-32 text-center xl:text-left flex items-center justify-center h-full">
-        {/* text & form */}
         <div className="flex flex-col w-full max-w-[700px]">
-          {/* text */}
           <motion.h2
             variants={fadeIn("up", 0.2)}
             initial="hidden"
@@ -40,7 +53,6 @@ const Contact = () => {
             Let's <span className="text-accent">connect.</span>
           </motion.h2>
 
-          {/* form */}
           <motion.form
             variants={fadeIn("up", 0.4)}
             initial="hidden"
@@ -48,67 +60,50 @@ const Contact = () => {
             exit="hidden"
             className="flex-1 flex flex-col gap-6 w-full mx-auto"
             onSubmit={handleSubmit}
-            autoComplete="off"
-            autoCapitalize="off"
-            // only needed for production (in netlify) to accept form input
-            data-netlify="true"
           >
-            {/* input group */}
-            <div className="flex gap-x-6 w-full">
-              <input
-                type="text"
-                name="name"
-                placeholder="Name"
-                className="input"
+            <div className="grid grid-cols-2 gap-6">
+              <div className="relative z-0">
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Your first name"
+                  className="w-full bg-transparent border-b-2 border-white/20 focus:border-accent focus:outline-none py-4 px-1 transition-all"
+                  disabled={isLoading}
+                  required
+                />
+              </div>
+              <div className="relative z-0">
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="johndoe@example.com"
+                  className="w-full bg-transparent border-b-2 border-white/20 focus:border-accent focus:outline-none py-4 px-1 transition-all"
+                  disabled={isLoading}
+                  required
+                />
+              </div>
+            </div>
+
+            <div className="relative z-0">
+              <textarea
+                name="message"
+                placeholder="Your message..."
+                className="w-full bg-transparent border-b-2 border-white/20 focus:border-accent focus:outline-none py-4 px-1 transition-all resize-none h-32"
                 disabled={isLoading}
-                aria-disabled={isLoading}
                 required
-                aria-required
-              />
-              <input
-                type="email"
-                name="email"
-                placeholder="E-mail"
-                className="input"
-                disabled={isLoading}
-                aria-disabled={isLoading}
-                required
-                aria-required
               />
             </div>
-            <input
-              type="text"
-              name="subject"
-              placeholder="Subject"
-              className="input"
-              disabled={isLoading}
-              aria-disabled={isLoading}
-              required
-              aria-required
-            />
-            <textarea
-              name="message"
-              placeholder="Message..."
-              className="textarea"
-              disabled={isLoading}
-              aria-disabled={isLoading}
-              required
-              aria-required
-            />
+
             <button
               type="submit"
-              className="btn rounded-full border border-white/50 max-w-[170px] px-8 transition-all duration-300 flex items-center justify-center overflow-hidden hover:border-accent group"
+              className="btn rounded-full border-2 border-accent max-w-[200px] px-8 py-3 transition-all duration-300 
+              hover:bg-accent/10 hover:border-accent/50 mt-6 mx-auto"
               disabled={isLoading}
-              aria-disabled={isLoading}
             >
-              <span className="group-hover:-translate-y-[120%] group-hover:opacity-0 transition-all duration-500">
-                Let's talk
+              <span className="flex items-center gap-2">
+                {isLoading ? 'Sending...' : "Contact me"}
+                <BsArrowRight className="text-xl" />
               </span>
-
-              <BsArrowRight
-                className="-translate-y-[120%] opacity-0 group-hover:flex group-hover:-translate-y-0 group-hover:opacity-100 transition-all duration-300 absolute text-[22px]"
-                aria-hidden
-              />
             </button>
           </motion.form>
         </div>
