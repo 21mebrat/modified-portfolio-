@@ -7,7 +7,6 @@ import {
   HiUser,
   HiViewColumns,
   HiRectangleGroup,
-  HiChatBubbleBottomCenterText,
   HiEnvelope,
 } from "react-icons/hi2";
 
@@ -17,45 +16,36 @@ export const navData = [
   { name: "about", path: "/about", Icon: HiUser },
   { name: "services", path: "/services", Icon: HiRectangleGroup },
   { name: "work", path: "/work", Icon: HiViewColumns },
-  {
-    name: "testimonials",
-    path: "/testimonials",
-    Icon: HiChatBubbleBottomCenterText,
-  },
-  {
-    name: "contact",
-    path: "/contact",
-    Icon: HiEnvelope,
-  },
+  { name: "contact", path: "/contact", Icon: HiEnvelope },
 ];
 
 const Nav = () => {
   const pathname = usePathname();
 
   return (
-    <nav className="flex flex-col items-center xl:justify-center gap-y-4 fixed h-max bottom-0 mt-auto xl:right-[2%] z-50 top-0 w-full xl:w-16 xl:max-w-md xl:h-screen">
-      <div className="flex w-full xl:flex-col items-center justify-between xl:justify-center gap-y-10 px-4 md:px-40 xl:px-0 h-[80px] xl:h-max py-8 bg-white/10 backdrop-blur-sm text-3xl xl:text-xl xl:rounded-full">
+    <nav className="flex fixed z-50 bottom-0 w-full xl:top-20 xl:right-[2%] xl:w-16 xl:h-screen xl:max-w-md">
+      <div className="flex w-full items-center justify-between bg-white/10 backdrop-blur-sm text-3xl px-4 md:px-20 lg:px-32 xl:px-0 h-[80px] xl:flex-col xl:h-max xl:justify-center xl:gap-y-10 xl:py-8 xl:rounded-full">
         {navData.map((link, i) => (
           <Link
-            className={`${
-              link.path === pathname && "text-accent"
-            } relative flex items-center group hover:text-accent transition-all duration-300`}
-            href={link.path}
             key={i}
+            href={link.path}
+            className={`${
+              pathname === link.path &&
+              "text-green-500 border-r-4 border-green-500 shadow-lg shadow-green-500/50 pr-4 animate-pulse"
+            } relative flex items-center group hover:text-green-500 transition-all duration-300`}
           >
-            {/* tolltip */}
+            {/* tooltip */}
             <div
               role="tooltip"
-              className="absolute pr-14 right-0 hidden xl:group-hover:flex"
+              className="hidden md:group-hover:flex absolute pr-14 right-0"
             >
-              <div className="bg-white relative flex text-primary items-center p-[6px] rounded-[3px]">
+              <div className="bg-white text-primary flex items-center p-[6px] rounded-[3px] relative">
                 <div className="text-[12px] leading-none font-semibold capitalize">
                   {link.name}
                 </div>
-
                 {/* triangle */}
                 <div
-                  className="border-solid border-l-white border-l-8 border-y-transparent border-y-[6px] border-r-0 absolute -right-2"
+                  className="absolute -right-2 border-solid border-l-white border-l-8 border-y-transparent border-y-[6px] border-r-0"
                   aria-hidden
                 />
               </div>

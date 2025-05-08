@@ -12,32 +12,26 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
-
-const serviceData = [
+export const serviceData = [
   {
-    Icon: RxCrop,
-    title: "Branding",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-  },
-  {
-    Icon: RxPencil2,
-    title: "Design",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-  },
-  {
+    title: "Frontend Development",
     Icon: RxDesktop,
-    title: "Development",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    description: "Building responsive interfaces with React, Next.js & Tailwind CSS"
   },
   {
-    Icon: RxReader,
-    title: "Copywriting",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    title: "UI/UX Design",
+    Icon: RxPencil2,
+    description: "Creating intuitive user experiences with modern design principles"
   },
   {
+    title: "Web Animation",
     Icon: RxRocket,
-    title: "SEO",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    description: "Implementing engaging animations with Framer Motion & GSAP"
+  },
+  {
+    title: "Responsive Optimization",
+    Icon: RxCrop,
+    description: "Ensuring perfect display across all devices and screen sizes"
   },
 ];
 

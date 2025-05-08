@@ -7,37 +7,34 @@ import {
   RiDribbbleLine,
   RiGithubLine,
   RiPinterestLine,
+  RiTelegramFill,
+  RiLinkedinBoxFill,
 } from "react-icons/ri";
 
 export const socialData = [
   {
     name: "YouTube",
-    link: "https://youtube.com",
+    link: "https://www.youtube.com/@PROGRAMMING21",
     Icon: RiYoutubeLine,
   },
   {
-    name: "Instagram",
-    link: "https://instagram.com",
-    Icon: RiInstagramLine,
+    name: "LinkedIn",
+    link: "www.linkedin.com/in/mebratmatebie212121",
+    Icon: RiLinkedinBoxFill,
   },
   {
     name: "Facebook",
-    link: "https://facebook.com",
+    link: "https://web.facebook.com/profile.php?id=100070506502886",
     Icon: RiFacebookLine,
   },
   {
-    name: "Dribbble",
-    link: "https://dribbble.com",
-    Icon: RiDribbbleLine,
-  },
-  {
-    name: "Pinterest",
-    link: "https://pinterest.com",
-    Icon: RiPinterestLine,
+    name: "Teleagram",
+    link: "https://t.me/mahtot2121",
+    Icon: RiTelegramFill,
   },
   {
     name: "Github",
-    link: "https://github.com/sanidhyy/modern-portfolio",
+    link: "https://github.com/21mebrat/modified-portfolio-",
     Icon: RiGithubLine,
   },
 ];

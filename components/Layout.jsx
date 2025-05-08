@@ -4,6 +4,9 @@ import Head from "next/head";
 import Header from "../components/Header";
 import Nav from "../components/Nav";
 import TopLeftImg from "../components/TopLeftImg";
+import Footer from "./Footer";
+import SecondNav from "./SecondNav";
+import Socials from "./Socials";
 // setup font
 const sora = Sora({
   subsets: ["latin"],
@@ -74,10 +77,12 @@ const Layout = ({ children }) => {
         <link rel="icon" href="/favicon.ico" sizes="any" />
       </Head>
       <TopLeftImg />
-      <Nav />
+      <SecondNav />
       <Header />
       {/* main content */}
       {children}
+      {/*Footer */}
+      <Footer />
     </main>
   );
 };

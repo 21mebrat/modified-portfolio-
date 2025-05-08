@@ -13,22 +13,27 @@ const workSlides = {
     {
       images: [
         {
-          title: "title",
+          title: "E-commerce Platform for Ethiopian Entrepreneurs",
           path: "/thumb1.jpg",
           link: "http://example.com",
         },
         {
-          title: "title",
+          title: "Student Dormitory Management System",
           path: "/thumb2.jpg",
           link: "http://example.com",
         },
         {
-          title: "title",
+          title: "Mern Book Store",
           path: "/thumb3.jpg",
           link: "http://example.com",
         },
         {
-          title: "title",
+          title: "Driving School Managment System ",
+          path: "/thumb4.jpg",
+          link: "http://example.com",
+        },
+        {
+          title: "E-learing Mern-stack ",
           path: "/thumb4.jpg",
           link: "http://example.com",
         },
@@ -93,7 +98,6 @@ const WorkSlider = () => {
                     className="absolute inset-0 bg-gradient-to-l from-transparent via-[#e838cc] to-[#4a22bd] opacity-0 group-hover:opacity-80 transition-all duration-700"
                     aria-hidden
                   />
-
                   {/* title */}
                   <div className="absolute bottom-0 translate-y-full group-hover:-translate-y-10 group-hover:xl:-translate-y-20 transition-all duration-300">
                     <Link
@@ -103,10 +107,10 @@ const WorkSlider = () => {
                       className="flex items-center gap-x-2 text-[13px] tracking-[0.2em]"
                     >
                       {/* title part 1 */}
-                      <div className="delay-100">LIVE</div>
+                      <div className="delay-100">See On</div>
                       {/* title part 2 */}
                       <div className="translate-y-[500%] group-hover:translate-y-0 transition-all duration-300 delay-150">
-                        PROJECT
+                        Github
                       </div>
                       {/* icon */}
                       <div className="text-xl translate-y-[500%] group-hover:translate-y-0 transition-all duration-300 delay-150">

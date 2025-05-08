@@ -4,7 +4,6 @@ import Bulb from "../../components/Bulb";
 import Circles from "../../components/Circles";
 import WorkSlider from "../../components/WorkSlider";
 import { fadeIn } from "../../variants";
-
 const Work = () => {
   return (
     <div className="h-full bg-primary/30 py-36 flex items-center">
@@ -20,7 +19,7 @@ const Work = () => {
               exit="hidden"
               className="h2 xl:mt-12"
             >
-              My work <span className="text-accent">.</span>
+              My Projects <span className="text-accent">.</span>
             </motion.h2>
             <motion.p
               variants={fadeIn("up", 0.4)}
@@ -33,7 +32,6 @@ const Work = () => {
               tempora eligendi, quisquam tempore sint reiciendis.
             </motion.p>
           </div>
-
           {/* slider */}
           <motion.div
             variants={fadeIn("down", 0.6)}
