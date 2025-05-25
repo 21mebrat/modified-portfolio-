@@ -26,9 +26,7 @@ I'm a Full Stack Developer passionate about building modern web applications tha
 
 ## 📫 Let's Connect
 
-- 🌍 Portfolio: [mebratmatebie.vercel.app](https://mebratmatebie.vercel.app)  
-- 🐦 Twitter: [@mebrat_dev](https://twitter.com/mebrat_dev)  
-- 💼 LinkedIn: [Mebrat Matebie](https://linkedin.com/in/mebratmatebie)  
+- 🌍 Portfolio: [mebratmatebie.vercel.app]([https://mebratmatebie.vercel.app](https://modified-portfolio.vercel.app/))  
 - 📁 Projects: [GitHub Repositories](https://github.com/your-github-username)
 
 ## 📊 GitHub Stats
