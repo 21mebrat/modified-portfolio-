@@ -21,8 +21,7 @@ const Home = () => {
             exit="hidden"
             className="h1 sm:hidden xl:flex xl:max-w-none pointer-events-none select-none"
           >
-            Hi, I'm <br /> Matebie {" "}
-            <span className="text-green-400">Mebrat</span>
+            Hi, I'm <br /> Mebrat {" "}
           </motion.h1>
           <h2 className="text-2xl md:text-3xl text-white">
             I’m a&nbsp;
