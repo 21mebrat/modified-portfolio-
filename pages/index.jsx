@@ -115,7 +115,6 @@ const SecondHome = () => {
               className="h1"
             >
               Hi, I'm <br /> Mebrat {" "}
-              <span className="text-green-400">Matebie</span>
             </motion.h1>
             <h2 className="text-2xl md:text-3xl text-white">
               I’m a&nbsp;
