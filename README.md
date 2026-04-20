@@ -27,8 +27,6 @@ I'm a Full Stack Developer passionate about building modern web applications tha
 ## 📫 Let's Connect
 
 - 🌍 Portfolio: [https://mebratmatebie.vercel.app](https://modified-portfolio.vercel.app/)
-- 📁 Projects: [GitHub Repositories]([https://github.com/your-github-username](https://github.com/21mebrat)
+- 📁 Projects: [GitHub Repositories](https://github.com/21mebrat)
 
 ---
-
-> “Read more to be full human being.” – Wordamariam Book Store 📖✨
